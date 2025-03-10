@@ -1,13 +1,18 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 const Counter = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0); 
 
   return (
-    <div>
-      <h2>Count: {count}</h2>
-      <button onClick={() => setCount(count + 1)} style={{"margin-right": "20px"}}>Increment</button>
-      <button onClick={() => setCount(count - 1)}>Decrement</button>
+    <div className="text-center mt-5">
+      <h2>Counter</h2>
+      <h1>{count}</h1>
+      <button className="btn btn-success me-2" onClick={() => setCount(count + 1)}>
+        Increment
+      </button>
+      <button className="btn btn-danger" onClick={() => setCount(count - 1)}>
+        Decrement
+      </button>
     </div>
   );
 };
